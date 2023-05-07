@@ -1,9 +1,59 @@
-{% extends 'store/main.html' %}
-{% load static %}
-{% block content %}
+{% extends 'store/main.html' %} {% load static %} {% block content %}
 <div class="grid grid-rows-1">
-  <div>01</div>
-  <!-- ... -->
-  <div>09</div>
+  <div class="border-2 px-4 py-5 shadow-md">
+    <div class="pb-2">
+      <button class="btn btn-outline btn-primary gap-2"><span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+      </span>Continue Shopping</button>
+    </div>
+    <div class="border"></div>
+    <div class="flex justify-between items-center pt-3">
+      <div>
+        <h1 class="font-bold">items: 3</h1>
+      </div>
+      <div>
+        <h1 class="font-bold">Total: $50</h1>
+      </div>
+      <div>
+        <button class="btn btn-outline btn-success font-bold gap-2">Checkout <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+        </svg>
+        </span></button>
+      </div>
+    </div>
+  </div>
+  <div class="border-2 px-6 py-6 shadow-md mt-5 flex justify-between items-center">
+    <div class="">
+      <img class="w-32"  src="{% static 'images/tempPic.png'%}" alt="">
+    </div>
+    <div class="">
+      <h1 class="font-bold mb-3">item</h1>
+      <h2>Product 1</h2>
+    </div>
+    <div>
+      <h1 class="font-bold mb-3">Price</h1>
+      <h2 class="text-center">$20</h2>
+    </div>
+    <div>
+      <h1 class="font-bold mb-3">Quantity</h1>
+      <div class="flex items-center gap-2 justify-center">
+        <h2>1</h2>
+        <div>
+          <div>
+            <img class="w-4 pb-1 cursor-pointer" src="{% static 'images/arrow-up.png'%}" alt="">
+          </div>
+          <div>
+            <img class="w-4 cursor-pointer" src="{% static 'images/arrow-down.png'%}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h1 class="font-bold mb-3">Total</h1>
+      <h2 class="text-center">$32</h2>
+    </div>
+  </div>
+
 </div>
 {% endblock content %}
