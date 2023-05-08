@@ -1,17 +1,29 @@
 {% extends 'store/main.html' %}
-{% load static %} 
+{% load static %}
 
 {% block content %}
 <form>
     <div class="hero ">
       <div class="hero-content flex-col">
         <div class="text-center lg:text-left">
-          <h1 class="text-5xl font-bold mt-5 text-primary">
-            Please Login Here !!
+          <h1 class="text-5xl font-bold mt-1 text-primary">
+            Please Register Here !!
           </h1>
         </div>
         <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <div class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Username</span>
+              </label>
+              <input
+                type="text"
+                name="Username"
+                placeholder="Username"
+                class="input input-bordered input-primary focus:outline-none active:border-none w-full max-w-xs"
+                required
+              />
+            </div>
             <div class="form-control">
               <label class="label">
                 <span class="label-text">Email</span>
@@ -35,13 +47,20 @@
                 class="input input-bordered input-primary focus:outline-none active:border-none w-full max-w-xs"
                 required
               />
+
+            </div>
+            <div class="form-control">
               <label class="label">
-                <a
-                  class="link link-primary "
-                >
-                  Forgot password?
-              </a>
+                <span class="label-text">Confirm Password</span>
               </label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Confirm Password"
+                class="input input-bordered input-primary focus:outline-none active:border-none w-full max-w-xs"
+                required
+              />
+
             </div>
             <div class="form-control mt-4">
               <button class="btn btn-primary text-white">Login</button>
@@ -49,9 +68,9 @@
             <div>
               <p class="p-2">
                 <small>
-                  New to Amazon?
+                  Already Have a account?
                   <a class="link link-primary">
-                    Register here
+                    Login here
                   </a>
                 </small>
               </p>
